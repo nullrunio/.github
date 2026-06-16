@@ -1,0 +1,68 @@
+name: Bug report
+description: Report something that isn't working as documented
+title: "[bug]: "
+labels: ["bug", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in the
+        template below — the more context, the faster we can reproduce
+        and fix it.
+
+  - type: input
+    id: component
+    attributes:
+      label: Affected component
+      description: Which repo / module is affected?
+      placeholder: "nullrun-sdk-python / nullrun.decorators / @protect"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Exact version (commit SHA, tag, or package version)
+      placeholder: "nullrun-sdk 0.3.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Minimal steps or code to reproduce the issue
+      placeholder: |
+        ```python
+        from nullrun import protect, init
+
+        init(api_key="...")
+        @protect
+        def my_agent(prompt): ...
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python/Rust version, deployment mode (hosted / self-hosted)
+      placeholder: "Python 3.11 on macOS 14, hosted plan"

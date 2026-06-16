@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest a new feature or improvement
+title: "[feat]: "
+labels: ["enhancement", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what you want and why. We prioritize features that solve
+        real problems for multiple users.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem are you trying to solve?
+      placeholder: |
+        I'm always frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed solution
+      description: How do you imagine it working?
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What have you tried or considered? Why is this better?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Examples, links, screenshots
+    validations:
+      required: false

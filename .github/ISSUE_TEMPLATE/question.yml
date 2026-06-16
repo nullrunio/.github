@@ -1,0 +1,27 @@
+name: Question
+description: Ask how something works, or get clarification
+title: "[q]: "
+labels: ["question", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Quick questions are welcome. For longer discussions, prefer
+        support@nullrun.io so the answer doesn't get lost in the issue
+        tracker.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What I've already tried
+    validations:
+      required: false

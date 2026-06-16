@@ -1,0 +1,7 @@
+# CODEOWNERS — nullrunio organization
+# GitHub uses this file to auto-assign reviewers for PRs.
+# Order matters: the last matching pattern wins.
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default: the org owner
+*       @maltsev-dev
