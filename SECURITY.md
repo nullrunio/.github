@@ -14,7 +14,8 @@ updates. Older versions are not patched.
 
 **Please do not file public issues for security problems.**
 
-Email: **security@nullrun.io**
+Email: **support@nullrun.io** (same inbox as general support — no
+separate security alias today)
 
 We will acknowledge receipt within 48 hours and aim to ship a fix or
 mitigation within 14 days for critical issues. We coordinate disclosure
