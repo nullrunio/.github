@@ -5,10 +5,10 @@
 NullRun is shipping in alpha. Only the latest minor version receives security
 updates. Older versions are not patched.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 0.3.x   | :white_check_mark: |
-| < 0.3   | :x:                |
+| Version   | Supported          |
+| --------- | ------------------ |
+| 0.4.x     | :white_check_mark: |
+| < 0.4     | :x:                |
 
 ## Reporting a Vulnerability
 
@@ -30,17 +30,18 @@ When reporting, please include:
 ## Scope
 
 In scope:
-- `nullrunio/nullrun` — gateway (Rust)
-- `nullrunio/nullrun-sdk-python` — Python SDK
-- `nullrunio/nullrun-docs` — documentation
+- `nullrunio/nullrun` — gateway (Rust, crate `breaker-core` 0.1.0) and frontend (`breaker-dashboard` 0.1.0)
+- `nullrunio/nullrun-sdk-python` — Python SDK (`nullrun` 0.4.0 on PyPI)
+- `nullrunio/nullrun-docs` — documentation site
 - `nullrunio/nullrun-examples` — example code
 
 Out of scope:
 - Third-party dependencies (please report upstream)
 - Social-engineering attacks against staff
 - Denial of service against the marketing site
+- Network/infrastructure issues outside our control
 
 ## Recognition
 
 We maintain a private acknowledgement list and will credit reporters in the
-relevant CHANGELOG unless anonymity is requested.
+release notes on https://nullrun.io/changelog unless anonymity is requested.
