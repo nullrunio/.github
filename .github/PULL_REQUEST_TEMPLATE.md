@@ -14,9 +14,9 @@
 
 <!-- How did you verify this? What manual / automated tests did you run? -->
 
-- [ ] Unit tests pass (`make test`)
-- [ ] Lint passes (`make lint`)
-- [ ] Type-check passes (`make type-check`)
+- [ ] Unit tests pass (per-repo, e.g. `cd backend && cargo test`, `cd frontend && npm test`)
+- [ ] Lint passes (per-repo, e.g. `cd frontend && npm run lint`)
+- [ ] Type-check passes (per-repo, e.g. `cd frontend && npm run type-check`)
 - [ ] Manually verified in dev / staging
 
 ## Risk
@@ -25,7 +25,7 @@
 
 ## Checklist
 
-- [ ] I have read [CONTRIBUTING.md](./CONTRIBUTING.md) (if present)
+- [ ] I have read the repo's `CONTRIBUTING.md` (if present)
 - [ ] My change does not introduce new lint warnings
 - [ ] I have updated the CHANGELOG (if user-visible)
 - [ ] I have considered backwards compatibility
