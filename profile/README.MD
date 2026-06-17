@@ -22,20 +22,16 @@ loops, or risky tool calls — before the bill lands, not after.
 
 ## Get started
 
-- 🟢 **[app.nullrun.io](https://app.nullrun.io)** — managed
-  control plane. Free Lite plan, no credit card.
+- 🟢 **[nullrun.io](https://nullrun.io)** — managed control plane
+  and dashboard in one place. Free Lite plan, no credit card.
 - 🐍 **`pip install nullrun`** — Python SDK with one-line
   instrumentation for OpenAI, Anthropic, OpenAI Agents, LangGraph,
   and the rest.
 - 📖 **[docs.nullrun.io](https://docs.nullrun.io)** — install,
   quickstart, concepts, and recipes.
-- 🛠️ **[github.com/nullrunio/nullrun](https://github.com/nullrunio/nullrun)** —
-  self-host the gateway.
 
 ## Repositories
 
-- **[nullrun](https://github.com/nullrunio/nullrun)** — the
-  enforcement gateway and the dashboard.
 - **[nullrun-sdk-python](https://github.com/nullrunio/nullrun-sdk-python)** —
   the Python SDK (`pip install nullrun`).
 - **[nullrun-docs](https://github.com/nullrunio/nullrun-docs)** —

@@ -31,10 +31,11 @@ When reporting, please include:
 ## Scope
 
 In scope:
-- `nullrunio/nullrun` — gateway (Rust, crate `breaker-core` 0.1.0) and frontend (`breaker-dashboard` 0.1.0)
-- `nullrunio/nullrun-sdk-python` — Python SDK (`nullrun` 0.4.0 on PyPI)
-- `nullrunio/nullrun-docs` — documentation site
-- `nullrunio/nullrun-examples` — example code
+- The NullRun gateway and dashboard (private repo — `breaker-core`
+  gateway 0.1.0 and `breaker-dashboard` frontend 0.1.0).
+- `nullrun-sdk-python` — Python SDK (`nullrun` 0.4.0 on PyPI).
+- `nullrun-docs` — documentation site.
+- `nullrun-examples` — example code.
 
 Out of scope:
 - Third-party dependencies (please report upstream)
