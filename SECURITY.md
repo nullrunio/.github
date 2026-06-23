@@ -7,8 +7,9 @@ updates. Older versions are not patched.
 
 | Version   | Supported          |
 | --------- | ------------------ |
-| 0.4.x     | :white_check_mark: |
-| < 0.4     | :x:                |
+| 0.6.x     | :white_check_mark: |
+| 0.5.x     | :white_check_mark: |
+| < 0.5     | :x:                |
 
 ## Reporting a Vulnerability
 
@@ -31,9 +32,8 @@ When reporting, please include:
 ## Scope
 
 In scope:
-- The NullRun gateway and dashboard (private repo — `breaker-core`
-  gateway 0.1.0 and `breaker-dashboard` frontend 0.1.0).
-- `nullrun-sdk-python` — Python SDK (`nullrun` 0.4.0 on PyPI).
+- The NullRun gateway and dashboard (private repo).
+- `nullrun-sdk-python` — Python SDK (`nullrun` 0.6.0 on PyPI).
 - `nullrun-docs` — documentation site.
 - `nullrun-examples` — example code.
 

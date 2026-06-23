@@ -26,7 +26,7 @@ body:
     attributes:
       label: Version
       description: Exact version (commit SHA, tag, or package version)
-      placeholder: "nullrun 0.4.0 (pip package name is `nullrun`; backend `breaker-core` 0.1.0)"
+      placeholder: "nullrun 0.6.0 (pip package name is `nullrun`; backend version is the deployed gateway release)"
     validations:
       required: true
 
