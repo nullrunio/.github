@@ -2,32 +2,35 @@
 
 # Ship AI agents. Stay in control.
 
-NullRun is the enforcement layer for AI agents. Drop in a one-line
-decorator, set a budget, and your agent stops when cost spirals,
-loops, or risky tool calls — before the bill lands, not after.
+NullRun is the runtime policy engine for AI agents. Drop in a one-line
+decorator, set a budget, and govern cost, tool use, and workflow state
+before a runaway agent turns into an incident.
 
 ## Why teams use NullRun
 
-- **Stop runaway costs.** Hard budget caps on every workflow. The
-  agent halts the moment the cap is hit, not in next week's report.
-- **Catch loops and retry storms.** Loops, retry storms, and
-  over-eager tools are detected and blocked mid-run, not after
-  the API bill does the talking.
-- **Kill from the dashboard.** When something goes wrong, hit
-  **Kill** and the agent stops within milliseconds — even
-  mid-execution. WebSocket control plane, not polling.
-- **Run sensitive tools safely.** Database writes, shell, file
-  deletes — gate each one with an explicit policy. Approvals,
-  allow-lists, full audit trail.
+- **Stop runaway costs.** Hard budget policies stop a workflow at the
+  cap. Soft policies can allow a bounded overdraft for an active chain,
+  up to the configured overdraft limit.
+- **Catch loops and retry storms.** Repeated tool calls and retry
+  storms are detected during a run so the gate can block or flag them
+  before the API bill does the talking.
+- **Control from the dashboard.** Pause or kill a workflow through the
+  WebSocket control plane. If the socket is unavailable, the SDK falls
+  back to HTTP polling; signals are applied at the next gate or yield
+  boundary, typically within about a second.
+- **Govern sensitive tools safely.** Database writes, shell, file
+  deletes, and external actions can be blocked by ToolBlock policies or
+  routed through human approval, with a full audit trail.
 
 ## Get started
 
 - 🟢 **[nullrun.io](https://nullrun.io)** — managed control plane
-  and dashboard in one place. Free Lite plan, no credit card.
+  and dashboard in one place. Start with the Lite plan, no credit card.
 - 🐍 **`pip install nullrun`** — Python SDK with one-line
   instrumentation for OpenAI, Anthropic, OpenAI Agents, LangGraph,
-  and the rest. Pass your `nr_live_...` API key to `init()` to
-  start tracking.
+  LangChain, LlamaIndex, CrewAI, AutoGen, Mistral, Gemini, Cohere,
+  and AWS Bedrock. Pass your `nr_live_...` API key to `init()` to
+  start tracking and enforcing policy.
 - 📖 **[docs.nullrun.io](https://docs.nullrun.io)** — install,
   quickstart, concepts, and recipes.
 
@@ -47,4 +50,6 @@ loops, or risky tool calls — before the bill lands, not after.
 - 🔒 **Security?** See
   [SECURITY.md](https://github.com/nullrunio/.github/blob/main/SECURITY.md)
   — please don't file public issues.
-- 💬 **Anything else:** [support@nullrun.io](mailto:support@nullrun.io).
+- 💬 **General questions:** [Discord](https://discord.gg/N63ECwnV3) is the
+  fastest channel.
+- ✉️ **Email support:** [support@nullrun.io](mailto:support@nullrun.io).

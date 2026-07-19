@@ -8,9 +8,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        Quick questions are welcome. For longer discussions, prefer
-        support@nullrun.io so the answer doesn't get lost in the issue
-        tracker.
+        Quick questions are welcome. For the fastest response, use
+        [Discord](https://discord.gg/N63ECwnV3). For private or account-specific
+        questions, email support@nullrun.io so the answer doesn't get lost in
+        the issue tracker. Please do not include credentials or private data.
 
   - type: textarea
     id: question

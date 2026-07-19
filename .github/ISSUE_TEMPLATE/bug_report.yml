@@ -25,8 +25,8 @@ body:
     id: version
     attributes:
       label: Version
-      description: Exact version (commit SHA, tag, or package version)
-      placeholder: "nullrun 0.6.0 (pip package name is `nullrun`; backend version is the deployed gateway release)"
+      description: Exact SDK/package version, commit SHA, tag, or gateway version from /healthz
+      placeholder: "nullrun 0.13.11; gateway 1.6.8 from /healthz"
     validations:
       required: true
 
@@ -34,7 +34,7 @@ body:
     id: repro
     attributes:
       label: Reproduction steps
-      description: Minimal steps or code to reproduce the issue
+      description: Minimal steps or code to reproduce the issue. Redact API keys, secrets, prompts, and private data.
       placeholder: |
         ```python
         from nullrun import protect, init
@@ -64,5 +64,14 @@ body:
     id: env
     attributes:
       label: Environment
-      description: OS, Python/Rust version, deployment mode (hosted / self-hosted)
-      placeholder: "Python 3.11 on macOS 14, hosted plan"
+      description: OS, Python version, SDK version, API URL, and hosted plan or local development setup
+      placeholder: "Python 3.12 on macOS 14, nullrun 0.13.11, hosted Lite plan"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste relevant redacted logs or error responses. Do not include credentials, HMAC secrets, prompts, or completions.
+      render: shell
+    validations:
+      required: false

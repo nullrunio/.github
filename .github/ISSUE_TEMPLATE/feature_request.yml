@@ -9,7 +9,8 @@ body:
     attributes:
       value: |
         Tell us what you want and why. We prioritize features that solve
-        real problems for multiple users.
+        real problems for multiple users. Please do not include credentials
+        or private customer data.
 
   - type: textarea
     id: problem

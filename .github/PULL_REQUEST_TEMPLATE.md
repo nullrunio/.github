@@ -14,10 +14,14 @@
 
 <!-- How did you verify this? What manual / automated tests did you run? -->
 
-- [ ] Unit tests pass (per-repo, e.g. `cd backend && cargo test`, `cd frontend && npm test`)
-- [ ] Lint passes (per-repo, e.g. `cd frontend && npm run lint`)
-- [ ] Type-check passes (per-repo, e.g. `cd frontend && npm run type-check`)
-- [ ] Manually verified in dev / staging
+- [ ] Repository-specific tests pass (or not applicable)
+- [ ] Repository-specific lint / formatting checks pass (or not applicable)
+- [ ] Repository-specific type-check or docs build passes (or not applicable)
+- [ ] Manually verified in dev / staging (or not applicable)
+
+<!-- Examples: Python SDK: `pytest`, `ruff check src/`, `mypy src/nullrun`;
+     docs: `mkdocs build --strict --clean`; frontend/backend: use the
+     commands documented by the repository. -->
 
 ## Risk
 
@@ -27,5 +31,5 @@
 
 - [ ] I have read the repo's `CONTRIBUTING.md` (if present)
 - [ ] My change does not introduce new lint warnings
-- [ ] I have updated the CHANGELOG (if user-visible)
+- [ ] I have updated the relevant changelog or release notes (if user-visible)
 - [ ] I have considered backwards compatibility
