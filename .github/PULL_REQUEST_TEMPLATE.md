@@ -29,7 +29,7 @@
 
 ## Checklist
 
-- [ ] I have read the repo's `CONTRIBUTING.md` (if present)
+- [ ] I have read the repo's contribution guide, if one exists (`CONTRIBUTING.md` or equivalent)
 - [ ] My change does not introduce new lint warnings
 - [ ] I have updated the relevant changelog or release notes (if user-visible)
 - [ ] I have considered backwards compatibility

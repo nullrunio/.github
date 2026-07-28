@@ -26,7 +26,7 @@ body:
     attributes:
       label: Version
       description: Exact SDK/package version, commit SHA, tag, or gateway version from /healthz
-      placeholder: "nullrun 0.13.11; gateway 1.6.8 from /healthz"
+      placeholder: "nullrun 0.14.x; gateway version from /healthz"
     validations:
       required: true
 
@@ -65,7 +65,7 @@ body:
     attributes:
       label: Environment
       description: OS, Python version, SDK version, API URL, and hosted plan or local development setup
-      placeholder: "Python 3.12 on macOS 14, nullrun 0.13.11, hosted Lite plan"
+      placeholder: "Python 3.12 on macOS 14, nullrun 0.14.x, hosted Lite plan"
 
   - type: textarea
     id: logs

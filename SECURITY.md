@@ -9,8 +9,8 @@ minor SDK release. Older minor releases may not receive security fixes.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.13.x  | :white_check_mark: |
-| < 0.13  | :x:                |
+| 0.14.x  | :white_check_mark: |
+| < 0.14  | :x:                |
 
 The hosted gateway and dashboard are continuously deployed. When reporting
 an issue that involves the gateway, include the deployed version returned by
@@ -42,7 +42,7 @@ values in logs and reproduction snippets.
 
 In scope:
 - The NullRun gateway and dashboard (private repo).
-- `nullrun-sdk-python` — Python SDK (`nullrun` 0.13.x on PyPI).
+- `nullrun-sdk-python` — Python SDK (`nullrun` 0.14.x on PyPI).
 - `nullrun-docs` — documentation site.
 - `nullrun-examples` — example code.
 
