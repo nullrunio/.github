@@ -53,8 +53,10 @@ Integration coverage varies by framework:
 ## Trust boundary
 
 NullRun evaluates structured action requests before execution and returns
-`allow`, `block`, or `require_approval`. It does not inspect prompts,
-tool arguments, or model output semantics. Cost enforcement relies on
+`allow`, `block`, or `require_approval`. It does not inspect prompts or
+raw semantic content; tool-block policies match tool names only, and
+approval rules predicate over typed, explicitly forwarded tool
+parameters — never arbitrary payloads. Cost enforcement relies on
 SDK-reported estimates and usage — a malicious SDK that controls its
 own cost reports is not protected by the gate.
 
