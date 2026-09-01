@@ -5,3 +5,10 @@
 
 # Default: the org owner
 *       @maltsev-dev
+
+# Safety net: before onboarding a second contributor, add a backup
+# @handle below so PR review survives owner absence / vacation.
+# Example:
+# *       @maltsev-dev @backup-handle
+# /docs/  @docs-team
+# Keep backup handles in alphabetical order per GitHub docs.
