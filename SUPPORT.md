@@ -6,8 +6,7 @@
   (`nullrun-sdk-python`, `nullrun-docs`, `nullrun-examples`, etc.)
 - **Security issue?** See [SECURITY.md](./SECURITY.md) — do not file a public
   issue
-- **General question or chat?** [Discord](https://discord.gg/N63ECwnV3) is the
-  fastest channel. You can also email **support@nullrun.io**.
+- **General question?** Email **support@nullrun.io**.
 
 ## What this org is
 
