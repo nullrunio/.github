@@ -1,80 +1,71 @@
-![NullRun](https://github.com/nullrunio/.github/blob/main/images/gh_banner.png)
+<div align="center">
 
-# Ship AI agents. Stay in control.
+![NullRun banner](https://raw.githubusercontent.com/nullrunio/.github/main/images/gh_banner.png)
 
-NullRun is the runtime decision layer for tool-using AI agents. Drop in a
-one-line decorator, set a budget, and govern cost, tool use, and workflow
-state before a runaway agent turns into an incident.
+# NullRun
 
-**Managed runtime control plane. Not a self-hosted deployment.**
+**Runtime authorization for AI agents.**
 
-## Why teams use NullRun
+Decide which agent actions are allowed to execute before they reach production systems.
 
-- **Stop runaway costs.** Hard budget policies stop a workflow at the cap.
-  Soft policies can allow a bounded overdraft for an active chain — but
-  only when the policy uses `enforcement_mode = Soft`, an active
-  `chain_id` exists, and the projected cost stays within the configured
-  overdraft limit.
-- **Action-bound approvals.** Approval rules can match against a typed
-  action payload (a money amount or a tool-call argument bag). Every
-  approval is bound by a SHA-256 digest of the exact payload — the gate
-  refuses to honour the grant if a later `/execute` arrives with a
-  different amount or different arguments.
-- **Control from the dashboard.** Pause or kill a workflow through the
-  WebSocket control plane. Signals are applied at the next gate or yield
-  boundary.
-- **Govern sensitive tools safely.** Database writes, shell, file
-  deletes, and external actions can be blocked by ToolBlock policies or
-  routed through human approval, with a full audit trail.
+</div>
 
-## SDK coverage
+---
 
-The Python SDK is the only runtime client for the agent hot path.
-Integration coverage varies by framework:
+```
+   AI Agent
+      │
+      │  tool call
+      ▼
+   ┌──────────┐
+   │ NullRun  │
+   │   Gate   │
+   └────┬─────┘
+        │
+        ├── ALLOW ────────────► Tool executes
+        ├── REQUIRE APPROVAL ─► Human decides
+        └── BLOCK ─────────────► Tool does not execute
+```
 
-- **End-to-end tested** (decorator plus dedicated behaviour tests):
-  LangGraph, CrewAI, AutoGen, LlamaIndex.
-- **HTTP transport tested**: OpenAI.
-- **Decorator implemented, no dedicated end-to-end test**: OpenAI
-  Agents, LangChain, Anthropic.
-- **Extractor unit-tested, no full transport-to-track integration
-  test**: Mistral, Gemini, Cohere, AWS Bedrock.
+## Start here
 
-## Get started
+| I want to... | Open |
+| --- | --- |
+| Install the SDK | **[nullrun-sdk-python](https://github.com/nullrunio/nullrun-sdk-python)** · `pip install nullrun` |
+| See it running | **[nullrun-examples](https://github.com/nullrunio/nullrun-examples)** · LangGraph, CrewAI, MCP, … |
+| Read the docs | **[docs.nullrun.io](https://docs.nullrun.io)** · concepts, how-to, API reference |
+| Manage policies | **[nullrun.io](https://nullrun.io)** · dashboard and control plane |
 
-- **[nullrun.io](https://nullrun.io)** — managed control plane and
-  dashboard in one place. Start with the Lite plan, no credit card.
-- **`pip install nullrun`** — Python SDK (0.14.x). Pass your
-  `nr_live_...` API key to `init()` to start tracking and enforcing
-  policy.
-- **[docs.nullrun.io](https://docs.nullrun.io)** — install, quickstart,
-  concepts, and recipes.
+## Releases
+
+[![Latest release](https://img.shields.io/github/v/release/nullrunio/nullrun-sdk-python?display_name=tag&sort=semver&style=for-the-badge)](https://github.com/nullrunio/nullrun-sdk-python/releases)
+[![PyPI](https://img.shields.io/pypi/v/nullrun?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/nullrun/)
+[![Python 3.10+](https://img.shields.io/pypi/pyversions/nullrun?style=for-the-badge&logo=python&logoColor=white)](https://pypi.org/project/nullrun/)
+[![Apache-2.0](https://img.shields.io/github/license/nullrunio/nullrun-sdk-python?style=for-the-badge)](https://github.com/nullrunio/nullrun-sdk-python/blob/master/LICENSE)
+
+[All SDK releases →](https://github.com/nullrunio/nullrun-sdk-python/releases)
+
+## What NullRun enforces
+
+- **Tool policies** — block sensitive tools before execution.
+- **Spend limits** — hard and soft budgets, chain-aware overdraft, rate caps.
+- **Human approval** — action-bound grants via SHA-256 payload digest.
+- **Workflow control** — pause / kill from the dashboard over WebSocket.
+- **Audit trail** — hash-chained `audit_events` for every gate decision.
 
 ## Trust boundary
 
-NullRun evaluates structured action requests before execution and returns
-`allow`, `block`, or `require_approval`. It does not inspect prompts or
-raw semantic content; tool-block policies match tool names only, and
-approval rules predicate over typed, explicitly forwarded tool
-parameters — never arbitrary payloads. Cost enforcement relies on
-SDK-reported estimates and usage — a malicious SDK that controls its
-own cost reports is not protected by the gate.
+NullRun evaluates structured action requests — `allow`, `require_approval`, `block`. It does **not** inspect prompts or arbitrary semantic content; tool-block policies match tool names only, and approval rules predicate over typed, explicitly forwarded tool parameters. Cost enforcement relies on SDK-reported usage — a malicious SDK that controls its own cost reports is not protected by the gate.
 
 ## Repositories
 
-- **[nullrun-sdk-python](https://github.com/nullrunio/nullrun-sdk-python)** —
-  the Python SDK (`pip install nullrun`).
-- **[nullrun-docs](https://github.com/nullrunio/nullrun-docs)** —
-  the documentation site.
-- **[nullrun-examples](https://github.com/nullrunio/nullrun-examples)** —
-  copy-paste-runnable examples for the most common agent frameworks.
+- **[nullrun-sdk-python](https://github.com/nullrunio/nullrun-sdk-python)** — Python SDK (Apache-2.0, `pip install nullrun`).
+- **[nullrun-docs](https://github.com/nullrunio/nullrun-docs)** — documentation source.
+- **[nullrun-examples](https://github.com/nullrunio/nullrun-examples)** — runnable agent integrations.
+- **`nullrun`** — gateway and dashboard. Private; access on request.
 
-## Get in touch
+## Support
 
 - **Bug or feature?** Open an issue in the relevant repo.
-- **Security?** See
-  [SECURITY.md](https://github.com/nullrunio/.github/blob/main/SECURITY.md)
-  — please don't file public issues.
-- **General questions:** [Discord](https://discord.gg/N63ECwnV3) is the
-  fastest channel.
-- **Email support:** [support@nullrun.io](mailto:support@nullrun.io).
+- **Security?** See [SECURITY.md](./SECURITY.md) — please don't file public issues.
+- **Email:** [support@nullrun.io](mailto:support@nullrun.io).
