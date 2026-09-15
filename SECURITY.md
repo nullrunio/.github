@@ -1,6 +1,6 @@
 # Security Policy
 
-Last reviewed: 2026-09-01 (no version changes since prior review)
+Last reviewed: 2026-09-15 (synced to current release line)
 
 ## Supported Versions
 
@@ -9,8 +9,9 @@ minor SDK release. Older minor releases may not receive security fixes.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.14.x  | :white_check_mark: |
-| < 0.14  | :x:                |
+| 0.17.x  | :white_check_mark: |
+| 0.16.x  | :white_check_mark: |
+| < 0.16  | :x:                |
 
 The hosted gateway and dashboard are continuously deployed. When reporting
 an issue that involves the gateway, include the deployed version returned by
@@ -42,7 +43,7 @@ values in logs and reproduction snippets.
 
 In scope:
 - The NullRun gateway and dashboard (private repo).
-- `nullrun-sdk-python` — Python SDK (`nullrun` 0.14.x on PyPI).
+- `nullrun-sdk-python` — Python SDK (`nullrun` 0.17.x on PyPI).
 - `nullrun-docs` — documentation site.
 - `nullrun-examples` — example code.
 
