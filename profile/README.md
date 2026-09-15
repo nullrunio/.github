@@ -1,5 +1,5 @@
 ![NullRun](https://github.com/nullrunio/.github/blob/main/images/gh_banner.png)
-<a href="https://www.producthunt.com/products/nullrun?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-nullrun" target="_blank" rel="noopener noreferrer"><img alt="NullRun - Runtime Authorization for AI Agents - Before They Execute | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1251200&amp;theme=light&amp;t=1789467970309"></a>
+<a href="https://www.producthunt.com/products/nullrun?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-nullrun" target="_blank" rel="noopener noreferrer"><img alt="NullRun - Runtime Authorization for AI Agents - Before They Execute | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1251200&amp;theme=dark&amp;t=1789477957129"></a>
 # Ship AI agents. Stay in control.
 
 NullRun is the runtime decision layer for tool-using AI agents. Drop in a
